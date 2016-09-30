@@ -1,6 +1,5 @@
 
-img {
-    width: 500px;
-    position: absolute;
-    left: 500px;
+body {
+    background: #dcdcdc;
+    padding: 20px;
 }
