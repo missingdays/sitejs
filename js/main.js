@@ -6,13 +6,18 @@ function onSearchInputClicked(){
     var searchResult = document.getElementsByClassName("main")[0];
 
     accessSearchEngine(searchText, function(data){
-        for(var i = 0; i < data.posts.length; i++){
 
-            var post = data.posts[i]
+        console.log(data);
+
+        searchResult.innerHTML = "";
+
+        for(var i = 0; i < data.RelatedTopics.length; i++){
+
+            var post = data.RelatedTopics[i]
 
             var postElement = document.createElement("div");
 
-            postElement.innerHTML = post.author + ":" + post.title;
+            postElement.innerHTML = post.Result;
 
             searchResult.appendChild(postElement);
         }
