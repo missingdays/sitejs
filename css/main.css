@@ -4,3 +4,10 @@ body {
     padding: 20px;
 }
 
+.Bord {
+    background: #f0f0f0;
+    text-align: left;
+    padding: 10px;
+    margin: 50px;
+    border: 1px;
+}
