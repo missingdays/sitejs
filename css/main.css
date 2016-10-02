@@ -1,13 +1,28 @@
 
 body {
     background: #f0f0f0;
-    padding: 20px;
+    padding: 1%;
 }
 
 .Bord {
     background: #fafafa;
     text-align: left;
-    padding: 10px;
-    margin: 50px;
+    padding: 0.15%;
+    margin: 1%;
     border: 1px solid #fff;
+}
+
+.button {
+    background: #f0f0f0;
+    text-align: center;
+    border: 1px solid #c8c8c8;
+    margin: 0.1% 0% 0.1% 0.1%;
+    width: 13%;
+}
+
+.searchLine {
+    background: #fff;
+    border: 1px solid #c8c8c8;
+    width: 80%;
+    margin: 0.75%;
 }
