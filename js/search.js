@@ -20,3 +20,9 @@ function accessTwitter(query, callback){
         }
     });
 }
+
+function focusInput(){
+    document.getElementById('searchInput').focus();
+}
+
+focusInput();
