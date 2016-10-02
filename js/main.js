@@ -1,16 +1,21 @@
-function onSearchInputClicked(){
+function onSearchInputClicked() {
     var searchInput = document.getElementById("searchInput");
     var searchText = searchInput.value;
 
+    if (searchText === '') {
+        focusInput();
+        return;
+    }
+
     var searchResult = document.getElementsByClassName("main")[0];
 
-    accessSearchEngine(searchText, function(data){
+    accessSearchEngine(searchText, function (data) {
 
         console.log(data);
 
         searchResult.innerHTML = "";
 
-        for(var i = 0; i < data.RelatedTopics.length; i++){
+        for (var i = 0; i < data.RelatedTopics.length; i++) {
 
             var post = data.RelatedTopics[i]
 

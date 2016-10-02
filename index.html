@@ -9,15 +9,14 @@
 
     </head>
     <body>
-        <p class="bord">
-        <input id="searchInput" onkeydown="ifEnterPressed(event)">
-        <button onclick="onSearchInputClicked()">Искать!</button>
+        <div class="bord">
+        <input class="SearchLine" id="searchInput" onkeydown="ifEnterPressed(event)">
+        <button class="Button" onclick="onSearchInputClicked()">Искать!</button>
+	</div>
 
         <div class="main"></div>
-
         <script src="js/storage.js"></script>
         <script src="js/search.js"></script>
         <script src="js/main.js"></script>
-        </p>
     </body>
 </html>
