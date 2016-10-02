@@ -28,4 +28,3 @@ function ifEnterPressed(event) {
         onSearchInputClicked();
     }
 }
-
