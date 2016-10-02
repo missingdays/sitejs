@@ -3,6 +3,11 @@ function onSearchInputClicked(){
     var searchInput = document.getElementById("searchInput");
     var searchText = searchInput.value;
 
+    if(searchText === ''){
+        focusInput();
+        return;
+    }
+
     var searchResult = document.getElementsByClassName("main")[0];
 
     accessSearchEngine(searchText, function(data){
