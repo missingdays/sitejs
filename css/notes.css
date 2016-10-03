@@ -1,0 +1,40 @@
+
+.main {
+    width: 70%;
+
+    display: block;
+    margin: auto;
+}
+
+.note {
+    background: white;
+    padding: 30px;
+    margin: 20px;
+}
+
+.noteText{
+    display: block;
+    margin: 10px;
+}
+
+.noteDate {
+    display: block;
+    float: right;
+}
+
+.inputWrapper {
+    width: 90%;
+
+    margin: auto;
+    display: block;
+}
+
+.inputWrapper button {
+    width: 10%;
+}
+
+.inputWrapper textarea{
+    width: 80%;
+
+    height: 100px;
+}
