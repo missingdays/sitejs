@@ -15,9 +15,11 @@ var defaultStorage = new Storage();
 function Storage(name){
     this.name = name || defaultStorageName;
 
-    localStorage[this.name] = JSON.stringify({
-        values: []
-    });
+    if(!localStorage.getItem(this.name)){
+        localStorage.setItem(this.name, JSON.stringify({
+            values: []
+        }));
+    }
 }
 
 function Note(text) {
@@ -30,6 +32,8 @@ function createNote() {
     var note = new Note(inputText.value);
     defaultStorage.addNote(note);
     inputText.value = "";
+
+    localStorage.setItem(note.text, "wtf");
 
     showAllNotes();
 }
