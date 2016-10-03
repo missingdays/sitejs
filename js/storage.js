@@ -18,6 +18,11 @@ function Storage(name){
     });
 }
 
+function Note(text) {
+    this.text = text;
+    this.timestamp = getTimestamp();
+}
+
 /**
  * Add new note to storage
  *
