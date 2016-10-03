@@ -97,7 +97,13 @@ Storage.prototype.addNote = function(note){
  * }
  */
 Storage.prototype.getAllNotes = function(){
-    return JSON.parse(localStorage.getItem(this.name));
+    var notes = JSON.parse(localStorage.getItem(this.name));
+
+    notes.values.sort(function compare(v1, v2){
+        return v1.timestamp < v2.timestamp;
+    });
+
+    return notes;
 }
 
 
