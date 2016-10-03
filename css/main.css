@@ -12,8 +12,12 @@ body {
     border: 1px solid #fff;
 }
 
+button {
+    border: 1px solid #c8c8c8;
+    background: #D7E8BA;
+}
+
 .button {
-    background: #f0f0f0;
     text-align: center;
     border: 1px solid #c8c8c8;
     margin: 0.1% 0% 0.1% 0.1%;
@@ -41,4 +45,20 @@ body {
     padding: 0.15%;
     border: 1px solid #fff;
     width: 25%
+}
+
+.head {
+    display: block;
+    margin: auto;
+    width: 80%;
+
+    height: 30px;
+}
+
+.head a {
+    float: right;
+}
+
+.head a:hover {
+    color: #FFD400;
 }
