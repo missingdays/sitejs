@@ -1,5 +1,7 @@
 
 var defaultStorageName = 'diaryNotes';
+var defaultStorage = new Storage();
+
 
 /**
  * Utility class for adding and removing notes to and from localstorage
@@ -23,6 +25,44 @@ function Note(text) {
     this.timestamp = getTimestamp();
 }
 
+function createNote() {
+    var inputText = document.getElementById("noteInput");
+    var note = new Note(inputText.value);
+    defaultStorage.addNote(note);
+    inputText.value = "";
+
+    showAllNotes();
+}
+
+function showAllNotes() {
+
+    var notes = defaultStorage.getAllNotes();
+
+    var notesElement = document.getElementsByClassName("notes")[0];
+    notesElement.innerHTML = "";
+
+    for(var i = 0; i < notes.values.length; i++){
+        var note = notes.values[i];
+        var noteElement = document.createElement('div');
+        noteElement.className = "note";
+
+        var textElement = document.createElement('span');
+        textElement.className = "noteText";
+        textElement.innerHTML = note.text;
+
+        var dateElement = document.createElement('span');
+        dateElement.className = "noteDate";
+        dateElement.innerHTML = formatTimestamp(note.timestamp);
+
+        noteElement.appendChild(textElement);
+        noteElement.appendChild(dateElement);
+
+        notesElement.appendChild(noteElement);
+
+    }
+
+}
+
 /**
  * Add new note to storage
  *
@@ -36,7 +76,7 @@ Storage.prototype.addNote = function(note){
 
     notes.values.push(note);
 
-    localStorage[this.name] = JSON.stringify(notes);
+    localStorage.setItem(this.name, JSON.stringify(notes));
 }
 
 /**
@@ -53,7 +93,7 @@ Storage.prototype.addNote = function(note){
  * }
  */
 Storage.prototype.getAllNotes = function(){
-    return JSON.parse(localStorage[this.name]);
+    return JSON.parse(localStorage.getItem(this.name));
 }
 
 
@@ -100,3 +140,6 @@ function align(v){
 
     return v;
 }
+
+
+showAllNotes();
