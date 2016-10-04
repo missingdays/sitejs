@@ -62,3 +62,17 @@ button {
 .head a:hover {
     color: #FF8E00;
 }
+
+.main {
+    border: 2px solid #fff;
+    background: #FAFAFA;
+    width: 30%;
+}
+
+.TitleName {
+    width: 30%;
+    text-align: center;
+    font-size: 18pt;
+    font-family: sans-serif;
+    font-stretch: expanded;
+}
