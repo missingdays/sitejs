@@ -14,7 +14,7 @@ body {
 
 button {
     border: 1px solid #c8c8c8;
-    background: #D7E8BA;
+    background: #DDD;
 }
 
 .button {
@@ -60,5 +60,5 @@ button {
 }
 
 .head a:hover {
-    color: #FFD400;
+    color: #FF8E00;
 }
