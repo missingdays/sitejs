@@ -15,13 +15,13 @@ function onSearchInputClicked() {
 
         searchResult.innerHTML = "";
 
-        for (var i = 0; i < data.RelatedTopics.length; i++) {
+        for (var i = 0; i < data.length; i++) {
 
-            var post = data.RelatedTopics[i]
+            var post = data[i]
 
             var postElement = document.createElement("div");
 
-            postElement.innerHTML = post.Result;
+            postElement.innerHTML = post.header + " " + post.text;
 
             searchResult.appendChild(postElement);
         }
