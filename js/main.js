@@ -7,7 +7,7 @@ function addSearchResult(result){
     var searchElement = document.getElementById("webSearchResult");
 
     var resultElement = document.createElement("div");
-    resultElement.className = "webSearchResult";
+    resultElement.className = "webSearchResult materialBlock";
 
     var headerSpan = document.createElement("div");
 
