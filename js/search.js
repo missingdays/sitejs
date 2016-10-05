@@ -15,7 +15,7 @@ function accessSearchEngine(query, callback){
                 var result = {};
                 var search = data.webPages.value[i];
 
-                result.link = search.displayUrl;
+                result.link = processLink(search.displayUrl);
                 result.header = search.name;
                 result.text = search.snippet;
 
@@ -44,6 +44,14 @@ function accessTwitter(query, callback){
 
 function focusInput(){
     document.getElementById('searchInput').focus();
+}
+
+function processLink(link){
+    if(/https/.test(link)){
+        return link;
+    }
+
+    return "https://" + link;
 }
 
 focusInput();

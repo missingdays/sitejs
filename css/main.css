@@ -64,8 +64,6 @@ button {
 }
 
 .main {
-    border: 2px solid #fff;
-    background: #FAFAFA;
     width: 30%;
 }
 
@@ -75,4 +73,15 @@ button {
     font-size: 18pt;
     font-family: sans-serif;
     font-stretch: expanded;
+}
+
+.webSearchResult {
+    margin: 10px;
+    padding: 10px;
+    background: white;
+}
+
+.webSearchResult .header {
+    font-size: 120%;
+    margin: 5px;
 }
