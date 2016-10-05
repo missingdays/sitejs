@@ -44,6 +44,8 @@ button {
     border: 1px solid #c8c8c8;
     width: 80%;
 
+    outline: none;
+
     margin: 10px;
 	height: 60%;
     font-size: 120%;
