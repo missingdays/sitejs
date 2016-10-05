@@ -28,14 +28,15 @@ function Note(text) {
 }
 
 function createNote() {
-    var inputText = document.getElementById("noteInput");
-    var note = new Note(inputText.value);
-    defaultStorage.addNote(note);
-    inputText.value = "";
-
-    localStorage.setItem(note.text, "wtf");
-
-    showAllNotes();
+	var inputText = document.getElementById("noteInput");
+	
+	if (inputText.value != "") {
+		var note = new Note(inputText.value);
+		defaultStorage.addNote(note);
+		inputText.value = "";
+		
+		showAllNotes();
+	}
 }
 
 function showAllNotes() {
