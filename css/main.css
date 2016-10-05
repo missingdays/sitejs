@@ -28,9 +28,9 @@ button {
 
     margin: 10px;
 
-    background-color: #2ecc71;
+    background-color: #FF8E00;
     color: #ecf0f1;
-	height: 60%;
+    height: 60%;
     text-align: center;
 
 }
@@ -107,4 +107,8 @@ button {
 	display: block;
     font-size: 120%;
     margin: 5px;
+}
+
+.resultTable {
+    width: 100%;
 }
